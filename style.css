@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 1px;
+    background-color: #d9ddcd;
+}
+
+.header {
+    text-align: center;
+    background-image: url('https://i.pinimg.com/originals/2a/53/65/2a53651a35816f499270d8275fd5318f.gif');
+    background-size: cover;
+    background-position: center; 
+    padding: 0;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    color: var(--awb-color1); 
+    margin: 0;
+
+   
+    perspective: 1000px; 
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    transform: rotateX(10deg); 
+    transform-origin: bottom;
+    z-index: -1;
+}
+
+
+section {
+    margin-bottom: 20px;
+    color: black;
+}
+
+h2 {
+    color: #3498db;
+}
+
+header h1 {
+    color: rgb(81, 157, 170);
+}
+
+header p {
+    color: rgb(228, 66, 17);
+    text-shadow: 1px 1px 1px #000;
+    font-weight: 100;
+}
+
+.profile {
+    width: 175px;
+    height: 175px;
+}
+
+.Experience {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+a:link {
+    color: #3498db;
+}
+
+a:visited {
+    color: #0a979c;
+}
+
+a:active {
+    color: yellow;
+}
+
+a:hover {
+    color: red;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: " Click here to visit link";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    background-color: #3498db; 
+    color: #fff; 
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: width 0.3s, opacity 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+.parallax {
+    height: 100vh;
+    background-image: url('parallax1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+    perspective: 100px;
+    object-fit: cover;
+}
+
+.section1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: center;
+    font-size: 24px; 
+}
+
+.section1 h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db; 
+    color: #fff;
+}
+
+.fa-html5 {
+    color: #E44D26; 
+    font-size: 24px;
+}
+
+.section2 {
+    margin-bottom: 20px;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #3498db, #1abc9c, #e74c3c, #9b59b6, #f39c12);
+    background-size: 200% 100%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.section2 h2 {
+    color: #fff;
+}
+
+.section2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section2 li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.section2 li i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.section2 h2, .section2 li {
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.section2 li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section2 li:hover i {
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .section1 {
+        padding: 10px;
+    }
+
+    .section2 {
+        padding: 10px;
+    }
+}
+
+.section4 {
+    background-image: url('imge2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    image-rendering: optimizeQuality;
+    
+}
+.section4 p {
+    color: black;
+}
